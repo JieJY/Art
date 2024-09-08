@@ -1,0 +1,63 @@
+/* 菜单栏样式 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.864);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-color: #fff;
+}
+
+/* 其他页面通用样式 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    background-color: #fafafa;
+}
+
+.content {
+    max-width: 800px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
