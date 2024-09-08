@@ -31,19 +31,6 @@
     color: #fff; /* 字体颜色变为白色 */
     border-color: #fff; /* 按钮边框颜色变化 */
 }
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 400; /* 确保字体粗细一致 */
-    font-size: 16px;   /* 设定默认字体大小，适用于桌面 */
-    line-height: 1.6;  /* 调整行高，提升可读性 */
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* 为移动设备设定合适的字体大小 */
-    }
-}
-
 
 /* 响应式设计：适应较小屏幕的导航栏样式 */
 @media (max-width: 768px) {
