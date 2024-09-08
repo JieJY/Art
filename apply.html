@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - Art Village</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+       
+        
+
+        /* Spacing to avoid overlap with the navbar */
+
+        body {
+            padding-top: 80px;
+            background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+            background-size: cover;
+            background-position: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #ddd;
+        }
+
+
+        /* Form container styles */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], textarea, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .social-media-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .social-media-group img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .upload-section {
+            margin-bottom: 20px;
+        }
+
+        .form-group button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .form-group button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="about.html">About</a>
+        <a href="residency.html">Residency</a>
+        <a href="founder.html">Founder</a>
+        <a href="apply.html">Apply</a>
+    </div>
+    <!-- Update form field names to match backend -->
+    <form action="http://localhost:3000/submit-form" method="POST" enctype="multipart/form-data">
+        <div class="form-container">
+            <h1>Application Form</h1>
+    
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullName" required>
+            </div>
+    
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+    
+            <!-- Nationality -->
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+    
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+    
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="form-group">
+                <label>Social Media Links</label>
+    
+                <!-- Instagram -->
+                <div class="social-media-group">
+                    <input type="text" name="instagram" placeholder="Instagram URL">
+                </div>
+    
+                <!-- Facebook -->
+                <div class="social-media-group">
+                    <input type="text" name="facebook" placeholder="Facebook URL">
+                </div>
+    
+                <!-- Others (No logo) -->
+                <div class="form-group">
+                    <label for="others">Other Social Media</label>
+                    <input type="text" id="others" name="others" placeholder="Other social media URL">
+                </div>
+            </div>
+    
+            <!-- Artist Statement Upload (Optional) -->
+            <div class="form-group">
+                <label for="artist-statement">Upload Artist Statement (Optional)</label>
+                <input type="file" id="artist-statement" name="artistStatement" accept=".pdf,.docx,.txt">
+            </div>
+    
+            <!-- CV Upload (Optional) -->
+            <div class="form-group">
+                <label for="cv">Upload CV (Optional)</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.docx">
+            </div>
+    
+            <!-- Upload Work Samples (Required) -->
+            <div class="form-group upload-section">
+                <label for="work-samples">Upload Work Samples (Required)</label>
+                <input type="file" id="work-samples" name="workSamples" accept=".pdf,.docx,.jpg,.png" required multiple>
+            </div>
+    
+            <!-- Project Proposal (Limited Text) -->
+            <div class="form-group">
+                <label for="project-proposal">Project Proposal (50 Words Max)</label>
+                <textarea id="project-proposal" name="projectProposal" maxlength="50" placeholder="Enter your project proposal (max 50 words)..."></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit Application</button>
+            </div>
+        </div>
+    </form>
+    
