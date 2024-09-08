@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Village - Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('https://s2.loli.net/2024/09/05/mlCcTAaj45H1rpi.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: bold;
+            color: #ddd;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.598);
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        /* 菜单按钮样式 */
+        .navbar a {
+            display: inline-block;
+            color: #ccc;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1); /* 按钮初始背景颜色 */
+        }
+
+        /* 鼠标悬停时效果 */
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.063); /* 鼠标悬停时背景颜色变化 */
+            color: #fff; /* 字体颜色变为白色 */
+            border-color: #fff; /* 按钮边框颜色变化 */
+        }
+
+        /* 内容区样式 */
+        .content {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="about.html">About</a>
+        <a href="residency.html">Residency</a>
+        <a href="founder.html">Founder</a>
+        <a href="apply.html">Apply</a>
+    </div>
+
+    <!-- 内容区 -->
+    <div class="content">
+        <h1>Welcome to the Art Village</h1>
+        <p>Select an option from the menu to explore more.</p>
+    </div>
+</body>
+</html>
