@@ -1,15 +1,17 @@
-/* 菜单栏样式 */
+/* 导航栏样式 */
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.864);
+    background-color: rgba(0, 0, 0, 0.598);
     padding: 15px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
+    flex-wrap: wrap; /* 添加这个属性以允许在窄屏幕上换行 */
 }
 
+/* 菜单按钮样式 */
 .navbar a {
     display: inline-block;
     color: #ccc;
@@ -20,44 +22,58 @@
     border: 2px solid transparent;
     border-radius: 30px;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* 按钮初始背景颜色 */
 }
 
+/* 鼠标悬停时效果 */
 .navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #fff;
-    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.063); /* 鼠标悬停时背景颜色变化 */
+    color: #fff; /* 字体颜色变为白色 */
+    border-color: #fff; /* 按钮边框颜色变化 */
 }
-
-/* 其他页面通用样式 */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    padding-top: 80px;
-    background-color: #fafafa;
+    font-weight: 400; /* 确保字体粗细一致 */
+    font-size: 16px;   /* 设定默认字体大小，适用于桌面 */
+    line-height: 1.6;  /* 调整行高，提升可读性 */
 }
 
-.content {
-    max-width: 800px;
-    margin: 100px auto 0 auto;
-    text-align: center;
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* 为移动设备设定合适的字体大小 */
+    }
 }
 
-h1 {
-    font-size: 36px;
-    color: #ffffff;
+
+/* 响应式设计：适应较小屏幕的导航栏样式 */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 10px 15px;  /* 减小按钮的内边距 */
+        font-size: 16px;      /* 减小按钮的字体大小 */
+    }
+    
+    h1 {
+        font-size: 32px;      /* 标题在移动设备上变小 */
+    }
+
+    p {
+        font-size: 16px;      /* 文字内容的字体也变小 */
+    }
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-}
+/* 超小屏幕（手机）适配 */
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 14px;  /* 进一步减小按钮的字体大小 */
+        margin: 5px;      /* 减小按钮间的距离 */
+    }
 
-img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
+    h1 {
+        font-size: 28px;  /* 超小屏幕时进一步缩小标题 */
+    }
+
+    p {
+        font-size: 14px;  /* 减小文本大小 */
+    }
 }
