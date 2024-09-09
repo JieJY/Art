@@ -5,11 +5,14 @@
     background-color: rgba(0, 0, 0, 0.598);
     padding: 15px;
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
+    left: 0;
     z-index: 100;
-    flex-wrap: wrap; /* 添加这个属性以允许在窄屏幕上换行 */
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 /* 菜单按钮样式 */
 .navbar a {
