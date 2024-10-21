@@ -66,12 +66,4 @@
     }
 }
 
-@media (max-width: 380px) {
-    .navbar {
-        flex-wrap: wrap;
-    }
 
-.ub-tfrm_q1khlr{
-    visibility:hidden;
-/* 超小屏幕（手机）适配 */
-}
