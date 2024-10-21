@@ -36,6 +36,37 @@
 }
 
 /* 响应式设计：适应较小屏幕的导航栏样式 */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 10px 11px;  /* 减小按钮的内边距 */
+        font-size: 14px;      /* 减小按钮的字体大小 */
+    }
+    
+    h1 {
+        font-size: 28px;      /* 标题在移动设备上变小 */
+    }
+
+    p {
+        font-size: 14px;      /* 文字内容的字体也变小 */
+    }
+}
+
+/* 超小屏幕（手机）适配 */
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 8px 11px;
+        font-size: 13px;  /* 进一步减小按钮的字体大小 */
+        margin: 5px;      /* 减小按钮间的距离 */
+    }
+
+    h1 {
+        font-size: 28px;  /* 超小屏幕时进一步缩小标题 */
+    }
+
+    p {
+        font-size: 14px;  /* 减小文本大小 */
+    }
+}
 
 @media (max-width: 420px) {
     .navbar a {
