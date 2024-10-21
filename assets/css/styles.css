@@ -52,21 +52,6 @@
 }
 
 /* 超小屏幕（手机）适配 */
-@media (max-width: 480px) {
-    .navbar a {
-        padding: 8px 11px;
-        font-size: 13px;  /* 进一步减小按钮的字体大小 */
-        margin: 5px;      /* 减小按钮间的距离 */
-    }
-
-    h1 {
-        font-size: 28px;  /* 超小屏幕时进一步缩小标题 */
-    }
-
-    p {
-        font-size: 14px;  /* 减小文本大小 */
-    }
-}
 
 @media (max-width: 420px) {
     .navbar a {
